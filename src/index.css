@@ -4,32 +4,29 @@
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Colors */
-  --color-primary: rgb(84 189 149);
-  --color-primary-hover: rgb(72 170 132);
-  --color-secondary-pink: rgb(255 214 214);
-  --color-background: rgb(249 248 253);
-  --color-dark: rgb(22 28 40);
-  --color-dark-alt: rgb(34 41 56);
-  --color-text-primary: rgb(25 26 21);
-  --color-text-secondary: rgb(166 166 166);
+  --color-primary: #54bda5;
+  --color-primary-dark: #3cad95;
+  --color-primary-light: #6fcdb5;
 
-  /* Spacing */
-  --spacing-section: 7.5rem;
-  --spacing-card-gap: 2.75rem;
+  --color-dark: #161c28;
+  --color-dark-light: #222938;
 
-  /* Border Radius */
-  --radius-card: 1.25rem;
-  --radius-button: 0.5rem;
+  --color-text-primary: #191a15;
+  --color-text-secondary: #a6a6a6;
+
+  --color-bg-light: #f9f8ff;
+
+  --color-accent-pink: #ffd6d6;
+  --color-accent-green: #54be96;
 }
 
 body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
 }
 
-* {
-  box-sizing: border-box;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
