@@ -1,88 +1,122 @@
 export default function Testimonials() {
-  const testimonials = [
-    {
-      avatar: './assets/images/testimonial-1.png',
-      text: 'Very good app. It\'s a definitely essential part of I get my head around how I\'m spending my money. Very good app. It\'s a definitely essential part of I get my head around how I\'m spending my money. Very good app. It\'s a definitely essential part of'
-    }
-  ];
-
   const avatars = [
-    './assets/images/testimonial-1.png',
-    './assets/images/testimonial-2.png',
-    './assets/images/testimonial-3.png',
-    './assets/images/testimonial-4.png'
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=132&h=132&fit=crop&crop=face',
+    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=132&h=132&fit=crop&crop=face',
+    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=132&h=132&fit=crop&crop=face',
+    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=132&h=132&fit=crop&crop=face',
   ];
 
   return (
-    <section className="py-20 bg-[--color-dark] text-white">
+    <section className="py-20 bg-dark">
       <div className="max-w-[1180px] mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Left column - Testimonial */}
-          <div>
-            <h2 className="text-[40px] font-bold leading-[56px] mb-8">
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Left Content */}
+          <div className="flex-1">
+            <h2 className="text-[36px] lg:text-[50px] font-semibold text-white leading-tight mb-6">
               People are Saying About DoWhith
             </h2>
-            <p className="text-white/70 text-[18px] leading-[30px] mb-12">
+
+            <p className="text-lg font-medium text-text-gray leading-[30px] mb-10 max-w-[461px]">
               Everything you need to accept to payment and grow your money of manage anywhere on planet
             </p>
 
-            <div className="bg-[--color-dark-alt] rounded-[20px] p-8 mb-8">
-              <p className="text-white/90 text-[18px] leading-[30px] mb-2">
-                {testimonials[0].text}
+            {/* Quote */}
+            <div className="mb-10">
+              <div className="text-primary text-6xl font-serif leading-none mb-4">"</div>
+              <p className="text-white text-lg leading-[30px] mb-6 max-w-[461px]">
+                "I just wanted to share a quick note and let you know that you guys do a really good job.
+                I'm glad I decided to work with you."
               </p>
-              <span className="text-[#FF6B6B]">❤️</span>
+              <p className="text-text-gray text-base">
+                — Bonnie Green, CEO at Dropbox
+              </p>
             </div>
 
+            {/* Avatars */}
             <div className="flex items-center gap-4">
-              {avatars.map((avatar, index) => (
-                <img
-                  key={index}
-                  src={avatar}
-                  alt={`User ${index + 1}`}
-                  className="w-[66px] h-[66px] rounded-full border-2 border-[--color-dark-alt] object-cover"
-                  loading="lazy"
-                />
-              ))}
-              <button className="w-[66px] h-[66px] rounded-full bg-[--color-dark-alt] flex items-center justify-center hover:bg-[--color-primary] transition-colors">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M9 6L15 12L9 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <div className="flex -space-x-3">
+                {avatars.map((avatar, i) => (
+                  <img
+                    key={i}
+                    src={avatar}
+                    alt="Customer"
+                    className="w-[66px] h-[66px] rounded-full border-2 border-dark object-cover"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+              <button className="w-[66px] h-[66px] rounded-full border-2 border-white flex items-center justify-center hover:bg-white/10 transition-colors duration-150">
+                <svg className="w-5 h-5 text-white ml-1" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
                 </svg>
               </button>
             </div>
           </div>
 
-          {/* Right column - Get Started Form */}
-          <div className="bg-[--color-dark-alt] rounded-[20px] p-12">
-            <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-[--color-primary] rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <path d="M4 8L16 2L28 8V14C28 22 16 30 16 30C16 30 4 22 4 14V8Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+          {/* Right Content - CTA Card */}
+          <div className="flex-1">
+            <div className="bg-dark-card rounded-[20px] p-10 h-full flex flex-col">
+              {/* Rocket Icon */}
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <svg className="w-20 h-24 text-primary" viewBox="0 0 72 86" fill="currentColor">
+                    <path d="M36 0C28 10 20 25 20 40c0 10 7 18 16 20v16c0 5.5 4.5 10 10 10h-20c5.5 0 10-4.5 10-10V60c9-2 16-10 16-20C52 25 44 10 36 0z" />
+                  </svg>
+                  {/* Decorative elements */}
+                  <div className="absolute -left-4 bottom-4 w-3 h-3 bg-primary rounded-full opacity-50"></div>
+                  <div className="absolute -right-4 bottom-8 w-2 h-2 bg-primary rounded-full opacity-30"></div>
+                </div>
               </div>
-              <h3 className="text-[32px] font-bold mb-2">Get Started</h3>
-            </div>
 
-            <form className="space-y-4">
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full px-6 py-4 rounded-lg bg-[--color-dark] border border-gray-700 text-white placeholder-gray-500 focus:border-[--color-primary] focus:outline-none transition-colors"
-              />
-              <input
-                type="text"
-                placeholder="Message"
-                className="w-full px-6 py-4 rounded-lg bg-[--color-dark] border border-gray-700 text-white placeholder-gray-500 focus:border-[--color-primary] focus:outline-none transition-colors"
-              />
-              <button
-                type="submit"
-                className="w-full px-6 py-4 rounded-lg bg-[--color-primary] text-white font-semibold hover:bg-[--color-primary-hover] transition-colors"
-              >
-                Request Demo
+              <h3 className="text-[30px] font-medium text-white text-center mb-6">
+                Get Started
+              </h3>
+
+              {/* Form Elements */}
+              <div className="space-y-6 flex-1">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                  </div>
+                  <span className="text-white text-base">Start your 30-days free trial</span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                  </div>
+                  <span className="text-white text-base">Powerful cloud documents</span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                  </div>
+                  <span className="text-white text-base">24/7 Great Support</span>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <button className="w-full mt-8 bg-primary text-white py-4 px-6 rounded-[10px] text-lg font-medium hover:bg-primary-dark transition-colors duration-150 flex items-center justify-center gap-3">
+                Try Free Trial
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </button>
-              <p className="text-center text-white/50 text-sm">
-                or Start Free Trial
+
+              <p className="text-text-gray text-sm text-center mt-4">
+                or <span className="text-white">Start Free Trial</span>
               </p>
-            </form>
+            </div>
           </div>
         </div>
       </div>
