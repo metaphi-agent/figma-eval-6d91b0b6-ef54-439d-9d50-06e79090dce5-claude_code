@@ -1,16 +1,16 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Companies from './components/Companies';
-import Support from './components/Support';
-import Features from './components/Features';
-import Benefits from './components/Benefits';
-import Pricing from './components/Pricing';
-import Testimonials from './components/Testimonials';
-import Footer from './components/Footer';
+import Header from './components/blocks/Header';
+import Hero from './components/blocks/Hero';
+import Companies from './components/blocks/Companies';
+import Support from './components/blocks/Support';
+import Features from './components/blocks/Features';
+import Benefits from './components/blocks/Benefits';
+import Pricing from './components/blocks/Pricing';
+import Testimonials from './components/blocks/Testimonials';
+import Footer from './components/blocks/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <Header />
       <main>
         <Hero />

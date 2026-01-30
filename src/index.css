@@ -1,32 +1,22 @@
 @import "tailwindcss";
 
+/* Design tokens from Figma */
 @theme {
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Colors */
-  --color-primary: #54bda5;
-  --color-primary-dark: #3cad95;
-  --color-primary-light: #6fcdb5;
-
-  --color-dark: #161c28;
-  --color-dark-light: #222938;
-
-  --color-text-primary: #191a15;
-  --color-text-secondary: #a6a6a6;
-
-  --color-bg-light: #f9f8ff;
-
-  --color-accent-pink: #ffd6d6;
-  --color-accent-green: #54be96;
+  --color-primary: #54BD95;
+  --color-primary-dark: #4BAA87;
+  --color-dark: #161C28;
+  --color-dark-card: #222A38;
+  --color-text-dark: #191A15;
+  --color-text-gray: #A6A6A6;
+  --color-light-bg: #F9F8FE;
+  --color-purple: #4535AF;
+  --color-light-green: #74C9A9;
 }
 
 body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }

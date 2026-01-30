@@ -1,9 +1,9 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function Button({
@@ -13,23 +13,23 @@ export default function Button({
   className = '',
   ...props
 }: ButtonProps) {
-  const baseStyles = 'font-semibold rounded-lg transition-colors duration-150 flex items-center justify-center';
+  const baseClasses = 'font-medium rounded-[10px] transition-all duration-150 cursor-pointer';
 
-  const variants = {
-    primary: 'bg-[--color-primary] text-white hover:bg-[--color-primary-hover]',
-    secondary: 'bg-white text-[--color-text-primary] hover:bg-gray-50 border border-gray-200',
-    outline: 'bg-transparent text-[--color-primary] hover:bg-[--color-primary]/10 border border-[--color-primary]'
+  const variantClasses = {
+    primary: 'bg-primary text-white hover:bg-primary-dark active:scale-[0.98]',
+    secondary: 'bg-dark text-white hover:bg-dark/90 active:scale-[0.98]',
+    outline: 'bg-transparent border-2 border-text-gray text-text-gray hover:border-primary hover:text-primary',
   };
 
-  const sizes = {
+  const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
+    lg: 'px-8 py-5 text-lg',
   };
 
   return (
     <button
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
       {...props}
     >
       {children}
